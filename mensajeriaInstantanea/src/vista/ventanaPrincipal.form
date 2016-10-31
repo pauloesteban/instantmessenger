@@ -23,16 +23,11 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="pnlTop" alignment="0" max="32767" attributes="0"/>
           <Group type="102" alignment="1" attributes="0">
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="pnlTop" alignment="0" max="32767" attributes="0"/>
-                  <Group type="102" attributes="0">
-                      <Component id="pnlLeft" min="-2" pref="259" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="pnlChat" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace min="-2" pref="206" max="-2" attributes="0"/>
+              <Component id="pnlLeft" min="-2" pref="259" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="pnlChat" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -232,7 +227,7 @@
                   <Component id="btnTodos" min="-2" pref="28" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="pnlContactos" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="191" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -389,7 +384,7 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="pnlIconos" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="87" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -462,11 +457,11 @@
                   <Group type="102" attributes="0">
                       <EmptySpace pref="16" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                              <Component id="btnEmoticones" alignment="3" min="-2" pref="85" max="-2" attributes="0"/>
+                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                               <Component id="btnAdjuntos" alignment="0" max="32767" attributes="0"/>
                               <Component id="btnImagenes" alignment="0" max="32767" attributes="0"/>
                               <Component id="btnMusica" alignment="0" max="32767" attributes="0"/>
+                              <Component id="btnEmoticones" min="-2" pref="85" max="-2" attributes="0"/>
                           </Group>
                           <Component id="btnZumbido" alignment="1" min="-2" pref="81" max="-2" attributes="0"/>
                       </Group>

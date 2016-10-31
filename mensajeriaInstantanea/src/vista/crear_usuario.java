@@ -5,6 +5,8 @@
  */
 package vista;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author Renzo
@@ -50,8 +52,18 @@ public class crear_usuario extends javax.swing.JFrame {
         jLabel4.setText("Confirmar contraseña:");
 
         jButton1.setText("Crear");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Cancelar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,6 +137,22 @@ public class crear_usuario extends javax.swing.JFrame {
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        login ventanaLogin = new login();
+        ventanaLogin.setLocationRelativeTo(null);
+        ventanaLogin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setVisible(false);
+        ventanaLogin.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        login ventanaLogin = new login();
+        ventanaLogin.setLocationRelativeTo(null);
+        ventanaLogin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setVisible(false);
+        ventanaLogin.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

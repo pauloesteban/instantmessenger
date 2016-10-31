@@ -5,6 +5,7 @@
  */
  package mensajeriainstantanea;
 
+import javax.swing.JFrame;
 import vista.*;
 /**
  *
@@ -17,9 +18,11 @@ public class MensajeriaInstantanea {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        ventanaPrincipal ventana = new ventanaPrincipal();
-        ventana.setVisible(true);
-        ventana.setResizable(false);
+        login ventanaLogin = new login();
+        ventanaLogin.setLocationRelativeTo(null);
+        ventanaLogin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        ventanaLogin.setVisible(true);
+        
     }
     
 
