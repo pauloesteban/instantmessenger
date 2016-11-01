@@ -27,23 +27,23 @@ public class ventanaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        pnlTop = new javax.swing.JPanel();
-        lblMyFoto = new javax.swing.JLabel();
-        lblFotoContacto = new javax.swing.JLabel();
-        lblNickContac = new javax.swing.JLabel();
-        lblEstadoContac = new javax.swing.JLabel();
-        btnDisponible = new javax.swing.JButton();
-        btnConfiguracion = new javax.swing.JButton();
-        jblMyEstado = new javax.swing.JLabel();
         pnlLeft = new javax.swing.JPanel();
         bntContactos = new javax.swing.JButton();
         btnBusqueda = new javax.swing.JButton();
         btnTodos = new javax.swing.JButton();
         pnlContactos = new javax.swing.JPanel();
-        lblUser1 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         lblUser1Disponible = new javax.swing.JLabel();
+        pnlTop = new javax.swing.JPanel();
+        lblMyFoto = new javax.swing.JLabel();
+        btnDisponible = new javax.swing.JButton();
+        btnConfiguracion = new javax.swing.JButton();
+        jblMyEstado = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        lblEstadoContac = new javax.swing.JLabel();
+        lblNickContac = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
         pnlChat = new javax.swing.JPanel();
         pnlHistrialChat = new javax.swing.JPanel();
         txtCHAT = new javax.swing.JTextField();
@@ -56,87 +56,12 @@ public class ventanaPrincipal extends javax.swing.JFrame {
         btnZumbido = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("3ARChat");
+        setName("3ARChat"); // NOI18N
 
-        pnlTop.setBackground(new java.awt.Color(204, 153, 255));
-        pnlTop.setName(""); // NOI18N
+        pnlLeft.setBackground(new java.awt.Color(255, 255, 255));
 
-        lblMyFoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fotomyperfil.jpg"))); // NOI18N
-
-        lblFotoContacto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fotoContacto (2).png"))); // NOI18N
-        lblFotoContacto.setText("jLabel1");
-
-        lblNickContac.setFont(new java.awt.Font("Utsaah", 1, 36)); // NOI18N
-        lblNickContac.setText("Renzo_23");
-        lblNickContac.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        lblEstadoContac.setFont(new java.awt.Font("Utsaah", 1, 18)); // NOI18N
-        lblEstadoContac.setText("De viaje");
-
-        btnDisponible.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LED ESTADO VERDE.png"))); // NOI18N
-        btnDisponible.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDisponibleActionPerformed(evt);
-            }
-        });
-
-        btnConfiguracion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Configuracion.png"))); // NOI18N
-
-        jblMyEstado.setFont(new java.awt.Font("Utsaah", 1, 18)); // NOI18N
-        jblMyEstado.setText("Escuchando musica");
-
-        javax.swing.GroupLayout pnlTopLayout = new javax.swing.GroupLayout(pnlTop);
-        pnlTop.setLayout(pnlTopLayout);
-        pnlTopLayout.setHorizontalGroup(
-            pnlTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlTopLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblMyFoto, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlTopLayout.createSequentialGroup()
-                        .addComponent(btnDisponible, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnConfiguracion, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jblMyEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblFotoContacto, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addGroup(pnlTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlTopLayout.createSequentialGroup()
-                        .addComponent(lblNickContac)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(lblEstadoContac, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        pnlTopLayout.setVerticalGroup(
-            pnlTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlTopLayout.createSequentialGroup()
-                .addGroup(pnlTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(pnlTopLayout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(lblNickContac, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(lblEstadoContac, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlTopLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(pnlTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblMyFoto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(pnlTopLayout.createSequentialGroup()
-                                .addGroup(pnlTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(pnlTopLayout.createSequentialGroup()
-                                        .addGroup(pnlTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(btnConfiguracion, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(btnDisponible))
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jblMyEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(lblFotoContacto))
-                                .addGap(0, 0, Short.MAX_VALUE)))))
-                .addContainerGap())
-        );
-
-        pnlLeft.setBackground(new java.awt.Color(204, 0, 204));
-
+        bntContactos.setBackground(new java.awt.Color(255, 255, 255));
         bntContactos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/contacto.png"))); // NOI18N
         bntContactos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,6 +71,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
 
         btnBusqueda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/busqueda.png"))); // NOI18N
 
+        btnTodos.setBackground(new java.awt.Color(255, 204, 255));
         btnTodos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/listas.png"))); // NOI18N
         btnTodos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -153,48 +79,41 @@ public class ventanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        pnlContactos.setBackground(new java.awt.Color(204, 0, 204));
+        pnlContactos.setBackground(new java.awt.Color(255, 255, 255));
         pnlContactos.setForeground(new java.awt.Color(204, 0, 153));
 
-        lblUser1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aleja.jpg"))); // NOI18N
-
-        jLabel1.setFont(new java.awt.Font("Utsaah", 1, 24)); // NOI18N
-        jLabel1.setText("Alejandra");
-
-        jLabel2.setFont(new java.awt.Font("Utsaah", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Arial Narrow", 1, 14)); // NOI18N
         jLabel2.setText("Amo a los gatos");
 
-        lblUser1Disponible.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LED ESTADO VERDE.png"))); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial Narrow", 1, 14)); // NOI18N
+        jLabel1.setText("Alejandra");
+
+        lblUser1Disponible.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoDispobible.png"))); // NOI18N
 
         javax.swing.GroupLayout pnlContactosLayout = new javax.swing.GroupLayout(pnlContactos);
         pnlContactos.setLayout(pnlContactosLayout);
         pnlContactosLayout.setHorizontalGroup(
             pnlContactosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlContactosLayout.createSequentialGroup()
-                .addComponent(lblUser1)
-                .addGap(18, 18, 18)
-                .addGroup(pnlContactosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblUser1Disponible)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlContactosLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(pnlContactosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2)
+                    .addGroup(pnlContactosLayout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblUser1Disponible)))
+                .addGap(85, 85, 85))
         );
         pnlContactosLayout.setVerticalGroup(
             pnlContactosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlContactosLayout.createSequentialGroup()
-                .addGroup(pnlContactosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlContactosLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(lblUser1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlContactosLayout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addGroup(pnlContactosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(lblUser1Disponible))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel2)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(pnlContactosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblUser1Disponible)
+                    .addComponent(jLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2)
+                .addContainerGap(67, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout pnlLeftLayout = new javax.swing.GroupLayout(pnlLeft);
@@ -203,20 +122,16 @@ public class ventanaPrincipal extends javax.swing.JFrame {
             pnlLeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlLeftLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnlLeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(pnlLeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlLeftLayout.createSequentialGroup()
-                        .addComponent(btnTodos, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(56, 56, 56))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlLeftLayout.createSequentialGroup()
-                        .addGroup(pnlLeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlLeftLayout.createSequentialGroup()
+                        .addGroup(pnlLeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnTodos, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(pnlLeftLayout.createSequentialGroup()
                                 .addComponent(bntContactos, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(pnlContactos, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                        .addGap(36, 36, 36)))
-                .addGap(0, 0, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(33, Short.MAX_VALUE))
+                    .addComponent(pnlContactos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         pnlLeftLayout.setVerticalGroup(
             pnlLeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -229,18 +144,112 @@ public class ventanaPrincipal extends javax.swing.JFrame {
                 .addComponent(btnTodos, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlContactos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(191, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        pnlChat.setBackground(new java.awt.Color(102, 0, 102));
+        pnlTop.setBackground(new java.awt.Color(204, 153, 255));
+        pnlTop.setName(""); // NOI18N
 
-        pnlHistrialChat.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        lblMyFoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fotomyperfil.jpg"))); // NOI18N
+
+        btnDisponible.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LED ESTADO VERDE.png"))); // NOI18N
+        btnDisponible.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDisponibleActionPerformed(evt);
+            }
+        });
+
+        btnConfiguracion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Configuracion.png"))); // NOI18N
+
+        jblMyEstado.setFont(new java.awt.Font("Arial Narrow", 1, 14)); // NOI18N
+        jblMyEstado.setText("Escuchando musica");
+
+        jTextField1.setBackground(new java.awt.Color(204, 153, 255));
+        jTextField1.setFont(new java.awt.Font("Arial Narrow", 1, 18)); // NOI18N
+        jTextField1.setText("Mi Perfil");
+        jTextField1.setBorder(null);
+
+        lblEstadoContac.setFont(new java.awt.Font("Arial Narrow", 1, 18)); // NOI18N
+        lblEstadoContac.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fotoContacto (2).png"))); // NOI18N
+
+        lblNickContac.setFont(new java.awt.Font("Arial Narrow", 1, 14)); // NOI18N
+        lblNickContac.setText("Renzo");
+        lblNickContac.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        jTextField2.setBackground(new java.awt.Color(204, 153, 255));
+        jTextField2.setFont(new java.awt.Font("Arial Narrow", 1, 14)); // NOI18N
+        jTextField2.setText("Estudiando");
+        jTextField2.setAutoscrolls(false);
+        jTextField2.setBorder(null);
+        jTextField2.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jTextField2.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnlTopLayout = new javax.swing.GroupLayout(pnlTop);
+        pnlTop.setLayout(pnlTopLayout);
+        pnlTopLayout.setHorizontalGroup(
+            pnlTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlTopLayout.createSequentialGroup()
+                .addGap(8, 8, 8)
+                .addComponent(lblMyFoto, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(4, 4, 4)
+                .addGroup(pnlTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnConfiguracion, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDisponible, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jblMyEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(pnlTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblNickContac))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblEstadoContac, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(pnlTopLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pnlTopLayout.setVerticalGroup(
+            pnlTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlTopLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlTopLayout.createSequentialGroup()
+                        .addGap(7, 7, 7)
+                        .addComponent(btnConfiguracion)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnDisponible)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jblMyEstado)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(lblMyFoto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(15, 15, 15))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlTopLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(pnlTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblEstadoContac, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pnlTopLayout.createSequentialGroup()
+                        .addComponent(lblNickContac, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+
+        pnlChat.setBackground(new java.awt.Color(255, 255, 255));
+
+        pnlHistrialChat.setBackground(new java.awt.Color(204, 204, 204));
 
         javax.swing.GroupLayout pnlHistrialChatLayout = new javax.swing.GroupLayout(pnlHistrialChat);
         pnlHistrialChat.setLayout(pnlHistrialChatLayout);
         pnlHistrialChatLayout.setHorizontalGroup(
             pnlHistrialChatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 508, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         pnlHistrialChatLayout.setVerticalGroup(
             pnlHistrialChatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -248,10 +257,11 @@ public class ventanaPrincipal extends javax.swing.JFrame {
         );
 
         txtCHAT.setText("QUE VAS HACER");
+        txtCHAT.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 204, 255), 2, true));
 
         btnEnviar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/enviar.png"))); // NOI18N
 
-        pnlIconos.setBackground(new java.awt.Color(102, 0, 102));
+        pnlIconos.setBackground(new java.awt.Color(255, 255, 255));
         pnlIconos.setForeground(new java.awt.Color(153, 0, 153));
 
         btnEmoticones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/emoticones.png"))); // NOI18N
@@ -274,56 +284,54 @@ public class ventanaPrincipal extends javax.swing.JFrame {
         pnlIconosLayout.setHorizontalGroup(
             pnlIconosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlIconosLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnEmoticones, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(52, 52, 52)
                 .addComponent(btnAdjuntos, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(59, 59, 59)
                 .addComponent(btnImagenes, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(57, 57, 57)
                 .addComponent(btnMusica, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addComponent(btnZumbido, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16))
+                .addGap(39, 39, 39))
         );
         pnlIconosLayout.setVerticalGroup(
             pnlIconosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlIconosLayout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
-                .addGroup(pnlIconosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlIconosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(btnAdjuntos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnImagenes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnMusica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnEmoticones, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(btnZumbido, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap()
+                .addGroup(pnlIconosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnZumbido, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pnlIconosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(btnAdjuntos)
+                        .addComponent(btnImagenes)
+                        .addComponent(btnMusica)
+                        .addComponent(btnEmoticones)))
+                .addGap(0, 47, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout pnlChatLayout = new javax.swing.GroupLayout(pnlChat);
         pnlChat.setLayout(pnlChatLayout);
         pnlChatLayout.setHorizontalGroup(
             pnlChatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnlHistrialChat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(pnlChatLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(pnlChatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlChatLayout.createSequentialGroup()
-                        .addComponent(txtCHAT)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnEnviar, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(pnlHistrialChat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(txtCHAT, javax.swing.GroupLayout.PREFERRED_SIZE, 674, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnEnviar, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(pnlChatLayout.createSequentialGroup()
-                .addComponent(pnlIconos, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnlIconos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         pnlChatLayout.setVerticalGroup(
             pnlChatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlChatLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(pnlHistrialChat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlChatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtCHAT, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pnlChatLayout.createSequentialGroup()
+                        .addComponent(pnlHistrialChat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtCHAT, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(5, 5, 5))
                     .addComponent(btnEnviar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlIconos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -335,19 +343,23 @@ public class ventanaPrincipal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(pnlTop, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(pnlLeft, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(pnlChat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(pnlLeft, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(pnlChat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(pnlTop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnlChat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnlLeft, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(pnlChat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(pnlLeft, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         pack();
@@ -368,6 +380,10 @@ public class ventanaPrincipal extends javax.swing.JFrame {
     private void btnEmoticonesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmoticonesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnEmoticonesActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -418,12 +434,12 @@ public class ventanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnZumbido;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     private javax.swing.JLabel jblMyEstado;
     private javax.swing.JLabel lblEstadoContac;
-    private javax.swing.JLabel lblFotoContacto;
     private javax.swing.JLabel lblMyFoto;
     private javax.swing.JLabel lblNickContac;
-    private javax.swing.JLabel lblUser1;
     private javax.swing.JLabel lblUser1Disponible;
     private javax.swing.JPanel pnlChat;
     private javax.swing.JPanel pnlContactos;
