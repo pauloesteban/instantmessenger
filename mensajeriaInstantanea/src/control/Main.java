@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
- package mensajeriainstantanea;
+ package control;
 
 import javax.swing.JFrame;
 import vista.*;
@@ -11,7 +11,7 @@ import vista.*;
  *
  * @author ochoa
  */
-public class MensajeriaInstantanea {
+public class Main {
 
     /**
      * @param args the command line arguments
