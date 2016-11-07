@@ -139,19 +139,19 @@ public class crear_usuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        login ventanaLogin = new login();
-        ventanaLogin.setLocationRelativeTo(null);
-        ventanaLogin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setVisible(false);
-        ventanaLogin.setVisible(true);
+//        login ventanaLogin = new login();
+//        ventanaLogin.setLocationRelativeTo(null);
+//        ventanaLogin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        this.setVisible(false);
+//        ventanaLogin.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        login ventanaLogin = new login();
-        ventanaLogin.setLocationRelativeTo(null);
-        ventanaLogin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setVisible(false);
-        ventanaLogin.setVisible(true);
+//        login ventanaLogin = new login();
+//        ventanaLogin.setLocationRelativeTo(null);
+//        ventanaLogin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        this.setVisible(false);
+//        ventanaLogin.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

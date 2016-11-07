@@ -18,11 +18,17 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-//        login ventanaLogin = new login();
-//        ventanaLogin.setLocationRelativeTo(null);
-//        ventanaLogin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        ventanaLogin.setVisible(true);
-        Principal ventanaPrincipal = new Principal("Harry","Programando");
+        Conexion conec = new Conexion();
+        conec.conectar();
+        
+        
+        login ventanaLogin = new login(conec);
+        ventanaLogin.setLocationRelativeTo(null);
+        ventanaLogin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        ventanaLogin.setVisible(true);
+//        Conexion conec = new Conexion();
+//        conec.conectar();
+//        Principal ventanaPrincipal = new Principal("Harry","Programando",conec);
         
     }
     

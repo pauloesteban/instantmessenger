@@ -5,6 +5,11 @@
  */
 package vista;
 
+import control.Conexion;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -17,7 +22,10 @@ public class login extends javax.swing.JFrame {
     /**
      * Creates new form login
      */
-    public login() {
+    Conexion conec;
+    
+    public login(Conexion conec) {
+        this.conec = conec;
         initComponents();
     }
 
@@ -33,7 +41,7 @@ public class login extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnIngresar = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         txtUser = new javax.swing.JTextField();
         txtPass = new javax.swing.JTextField();
@@ -55,14 +63,14 @@ public class login extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(64, 0, 132));
         jLabel3.setText("Contraseña:");
 
-        jButton1.setBackground(new java.awt.Color(72, 72, 249));
-        jButton1.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Ingresar");
-        jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 51, 153), 3, true));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnIngresar.setBackground(new java.awt.Color(72, 72, 249));
+        btnIngresar.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        btnIngresar.setForeground(new java.awt.Color(255, 255, 255));
+        btnIngresar.setText("Ingresar");
+        btnIngresar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 51, 153), 3, true));
+        btnIngresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnIngresarActionPerformed(evt);
             }
         });
 
@@ -92,8 +100,6 @@ public class login extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\7 SEMESTRE\\Interaccion Hombre Maquina\\instantmessenger\\mensajeriaInstantanea\\src\\LOGO 100X100.jpg")); // NOI18N
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -103,7 +109,7 @@ public class login extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel2)
                                 .addComponent(jLabel3)))
@@ -146,7 +152,7 @@ public class login extends javax.swing.JFrame {
                     .addComponent(jLabel3))
                 .addGap(46, 46, 46)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnRegistrarse, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -160,17 +166,41 @@ public class login extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if("Telematica".equals(txtUser.getText()) && "1234567890".equals(txtPass.getText())){
-            ventanaPrincipal ventana = new ventanaPrincipal();
-            this.setVisible(false);
-            ventana.setLocationRelativeTo(null);
-            ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            ventana.setVisible(true);
-        }else{
-            JOptionPane.showMessageDialog(this, "Error de credenciales");
+    private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
+        String user, pass;
+        boolean acceso = false;
+        user = txtUser.getText();
+        pass = txtPass.getText();
+        ArrayList<String> datos;
+        try {
+            datos = conec.login();
+            for (int i = 0; i < datos.size(); i = 1 + 2) {
+                if(user.equals(datos.get(i))){
+                    if(pass.equals(datos.get(i+1))){
+                        acceso = true;
+                    }
+                }
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(this, "Error al obtener datos de login");
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+        if(acceso){
+            setVisible(false);
+            Principal ventanaPrincipal = new Principal("Harry","Programando",conec);
+            ventanaPrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        }
+        
+        
+//        if("Telematica".equals(txtUser.getText()) && "1234567890".equals(txtPass.getText())){
+//            ventanaPrincipal ventana = new ventanaPrincipal();
+//            this.setVisible(false);
+//            ventana.setLocationRelativeTo(null);
+//            ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//            ventana.setVisible(true);
+//        }else{
+//            JOptionPane.showMessageDialog(this, "Error de credenciales");
+//        }
+    }//GEN-LAST:event_btnIngresarActionPerformed
 
     private void btnRegistrarseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarseActionPerformed
         crear_usuario ventanaNuevo = new crear_usuario();
@@ -210,14 +240,14 @@ public class login extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new login().setVisible(true);
+//                new login().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnIngresar;
     private javax.swing.JButton btnRegistrarse;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

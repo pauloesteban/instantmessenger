@@ -1,5 +1,6 @@
 package vista;
 
+import control.Conexion;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -20,6 +21,7 @@ import javax.swing.JPanel;
  * @fecha 06/11/2016
  */
 public class Principal extends JFrame{
+    Conexion conec;
     String estadoMy;
     int anchoT = 900, altoT = 560;
     int anchoL = anchoT - 600, altoTop = 120;
@@ -39,9 +41,10 @@ public class Principal extends JFrame{
     String[] estados = {"Full vacaciones", "Camellando", "Disfrutando de la vida", "Aki estudiando"};
     int[] estadoColor = {1,2,1,3};
     
-    public Principal(String usuario, String estadoMy){
+    public Principal(String usuario, String estadoMy, Conexion conec){
         super("3AR-CHAT " + usuario);
         this.estadoMy = estadoMy;
+        this.conec = conec;
         iniciarPanels();
         iniciarConponentes();
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
