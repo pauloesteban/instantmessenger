@@ -59,7 +59,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
         setTitle("3ARChat");
         setName("3ARChat"); // NOI18N
 
-        pnlLeft.setBackground(new java.awt.Color(255, 255, 255));
+        pnlLeft.setBackground(new java.awt.Color(204, 204, 204));
 
         bntContactos.setBackground(new java.awt.Color(255, 255, 255));
         bntContactos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/contacto.png"))); // NOI18N
@@ -345,7 +345,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
             .addComponent(pnlTop, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(pnlLeft, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlChat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -355,7 +355,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
                 .addComponent(pnlTop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
+                        .addGap(18, 18, 18)
                         .addComponent(pnlChat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)

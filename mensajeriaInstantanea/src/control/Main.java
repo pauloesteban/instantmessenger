@@ -18,10 +18,11 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        login ventanaLogin = new login();
-        ventanaLogin.setLocationRelativeTo(null);
-        ventanaLogin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        ventanaLogin.setVisible(true);
+//        login ventanaLogin = new login();
+//        ventanaLogin.setLocationRelativeTo(null);
+//        ventanaLogin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        ventanaLogin.setVisible(true);
+        Principal ventanaPrincipal = new Principal("Harry","Programando");
         
     }
     
