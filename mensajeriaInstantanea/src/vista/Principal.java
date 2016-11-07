@@ -34,6 +34,11 @@ public class Principal extends JFrame{
     Color moradoList = new Color(204,39,248);
     Color moradoChat = new Color(232,183,231);
     JPanel pnlTop, pnlList, pnlChat, pnlMyPerfil, pnlPerfilChat;
+    
+    String[] nombres = {"Aleja", "Bryan", "Meche", "Junio"};
+    String[] estados = {"Full vacaciones", "Camellando", "Disfrutando de la vida", "Aki estudiando"};
+    int[] estadoColor = {1,2,1,3};
+    
     public Principal(String usuario, String estadoMy){
         super("3AR-CHAT " + usuario);
         this.estadoMy = estadoMy;
@@ -229,8 +234,11 @@ public class Principal extends JFrame{
 
     private void iniciarListaContactos() {
         pnlList.setLayout(new FlowLayout());
-        Usuario user = new Usuario(1);
-        pnlList.add(user);
+        for (int i = 0; i < 4; i++) {
+            Usuario user = new Usuario(i+1,nombres[i],estados[i],estadoColor[i]);
+            pnlList.add(user);
+        }
+        
         
 //        JOptionPane.showMessageDialog(this,"Cargado");
     }
