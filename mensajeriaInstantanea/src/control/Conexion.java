@@ -20,7 +20,7 @@ public class Conexion{
             JOptionPane.showMessageDialog(null,"Error al cargar la conexion " + e.toString());
         }
         try {
-            con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3309/mensajeria.database?user=root&password=telematica");
+            con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/mensajeria.database?user=root&password=telematica");
         }catch(SQLException e){
             JOptionPane.showMessageDialog(null,"Error de conexion con la base de datos "+ e.getMessage());
         }
@@ -42,4 +42,15 @@ public class Conexion{
       }
       return datos;
    }
+
+    public Statement createStatement() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void close() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
+    
 }
