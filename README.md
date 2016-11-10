@@ -11,3 +11,11 @@ GUI para mensajería instantánea
 
 ### Académico:
 Paulo Chiliguano
+
+### TODO:
+- Registro para otros usuarios
+- Validación de usuario
+- Visibilidad de contraseña
+- Opción de recuperación de contraseña
+- Probar otros tipos de letra, tamaño de letra
+- Colores Pantone para pantalla principal del chat
