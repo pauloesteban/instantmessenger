@@ -47,13 +47,19 @@ public class Conexion{
     
     public void insertar(String nombre,String correo,String contraseña) throws SQLException
     {
-    PreparedStatement ingreso = con.prepareStatement("INSERT INTO tb_usuarios(nick,correo,contraseña,idActivo)"+" values(?,?,?,?,?)");
+    PreparedStatement ingreso = con.prepareStatement("INSERT INTO tb_usuarios(nick,correo,contraseña,idActivo)"+" values(?,?,?,?)");
     
-    ingreso.setString(2, nombre);
-    ingreso.setString(3, correo);
-    ingreso.setString(4, contraseña);
-    ingreso.setString(5,"1" );
+    ingreso.setString(1, nombre);
+    ingreso.setString(2, correo);
+    ingreso.setString(3, contraseña);
+    ingreso.setString(4,"1" );
     ingreso.executeUpdate();
+        try {
+            con.commit();
+        } catch (SQLException e) {
+            System.out.println("Autocomit: "+e.getMessage());
+        }
+    
     JOptionPane.showMessageDialog(null, "REGISTRO EXITOSO");
     
     }
