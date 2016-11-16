@@ -12,6 +12,8 @@ import javax.swing.JOptionPane;
  */
 public class Conexion{
     Connection con;
+
+    
     public void conectar(){
         try {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
@@ -20,7 +22,7 @@ public class Conexion{
             JOptionPane.showMessageDialog(null,"Error al cargar la conexion " + e.toString());
         }
         try {
-            con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3309/mensajeria.database?user=root&password=telematica");
+            con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/mensajeria.database?user=root&password=telematica");
         }catch(SQLException e){
             JOptionPane.showMessageDialog(null,"Error de conexion con la base de datos "+ e.getMessage());
         }
@@ -42,6 +44,22 @@ public class Conexion{
       }
       return datos;
    }
+    
+    public void insertar(String nombre,String correo,String contraseña) throws SQLException
+    {
+    PreparedStatement ingreso = con.prepareStatement("INSERT INTO tb_usuarios(nick,correo,contraseña,idActivo)"+" values(?,?,?,?,?)");
+    
+    ingreso.setString(2, nombre);
+    ingreso.setString(3, correo);
+    ingreso.setString(4, contraseña);
+    ingreso.setString(5,"1" );
+    ingreso.executeUpdate();
+    JOptionPane.showMessageDialog(null, "REGISTRO EXITOSO");
+    
+    }
+     
+
+    
 
     public Statement createStatement() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -50,6 +68,10 @@ public class Conexion{
     public void close() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+   
+
+   
     
     
     

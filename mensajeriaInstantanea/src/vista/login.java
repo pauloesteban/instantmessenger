@@ -201,7 +201,7 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_btnIngresarActionPerformed
 
     private void btnRegistrarseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarseActionPerformed
-        crear_usuario ventanaNuevo = new crear_usuario();
+        crear_usuario ventanaNuevo = new crear_usuario(conec);
         this.setVisible(false);
         ventanaNuevo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ventanaNuevo.setLocationRelativeTo(null);

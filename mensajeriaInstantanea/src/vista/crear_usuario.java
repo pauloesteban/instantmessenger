@@ -6,7 +6,13 @@
 package vista;
 
 import control.Conexion;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Arrays;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -21,11 +27,16 @@ public class crear_usuario extends javax.swing.JFrame {
      * Creates new form crear_usuario
      * 
      */
-    public crear_usuario() {
-        
+    Conexion conec;
+    
+    
+    public crear_usuario(Conexion conec) {
+        this.conec=conec;
         initComponents();
+        
         this.txtcontraseña.setText("");
         this.txtConfContraseña.setText("");
+        
     }
 
     /**
@@ -175,14 +186,26 @@ public class crear_usuario extends javax.swing.JFrame {
         }
     else
         {
-            if(txtcontraseña.getPassword()!=txtConfContraseña.getPassword())
+            if(Arrays.equals(txtcontraseña.getPassword(), txtConfContraseña.getPassword()))
             {
+               
+                    try {
+                        conec.insertar(nombre, correo, contraseña);
+                        
+                       
+                    } catch (SQLException ex) {
+                        Logger.getLogger(crear_usuario.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                
+                
+             
+            }
+            else{
                 javax.swing.JOptionPane.showMessageDialog(this,"Las contraseñas no coinciden \n","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
-                 this.txtcontraseña.setText("");
-                 this.txtConfContraseña.setText("");
+                this.txtcontraseña.setText("");
+                this.txtConfContraseña.setText("");
                 txtcontraseña.requestFocus();
-                }
-            
+            }
                 
         }
             
@@ -231,8 +254,8 @@ public class crear_usuario extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new crear_usuario().setVisible(true);
-            }
+                //new crear_usuario(conec).setVisible(true)
+            };
         });
     }
 
