@@ -5,6 +5,7 @@
  */
  package control;
 
+import conexion.Conexion;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import vista.*;
@@ -21,11 +22,15 @@ public class Main {
         // TODO code application logic here
         try {
             Conexion conec = new Conexion();
-            conec.conectar();
-            login ventanaLogin = new login(conec);
-            ventanaLogin.setLocationRelativeTo(null);
-            ventanaLogin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            ventanaLogin.setVisible(true);
+            VistaPrincipal ventanaPrincipal = new VistaPrincipal();
+            ControlPrincipal controlVentanaPrincipal = new ControlPrincipal(conec, ventanaPrincipal);
+            ventanaPrincipal.setControl(controlVentanaPrincipal);
+            
+            
+//            login ventanaLogin = new login(conec);
+//            ventanaLogin.setLocationRelativeTo(null);
+//            ventanaLogin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//            ventanaLogin.setVisible(true);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error de inicio "+e.getMessage());
         }

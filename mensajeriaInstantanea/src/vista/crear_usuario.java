@@ -5,7 +5,7 @@
  */
 package vista;
 
-import control.Conexion;
+import conexion.Conexion;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -188,17 +188,11 @@ public class crear_usuario extends javax.swing.JFrame {
         {
             if(Arrays.equals(txtcontraseña.getPassword(), txtConfContraseña.getPassword()))
             {
-               
                     try {
-                        conec.insertar(nombre, correo, contraseña);
-                        
-                       
-                    } catch (SQLException ex) {
-                        Logger.getLogger(crear_usuario.class.getName()).log(Level.SEVERE, null, ex);
+                        conec.ejecutarProcediminetoTabla("{CALL nuevo_usuario('"+txtNombre.getText()+"','"+txtCorreo.getText()+"','"+new String(txtcontraseña.getPassword())+"')}");
+                    } catch (Exception e) {
+                        JOptionPane.showMessageDialog(this, "Error al crear nuevo usuario: "+e.getMessage());
                     }
-                
-                
-             
             }
             else{
                 javax.swing.JOptionPane.showMessageDialog(this,"Las contraseñas no coinciden \n","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
