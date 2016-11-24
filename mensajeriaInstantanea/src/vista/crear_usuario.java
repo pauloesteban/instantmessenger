@@ -28,6 +28,10 @@ public class crear_usuario extends javax.swing.JFrame {
      * 
      */
     Conexion conec;
+    private String contraseña;
+    private String confcontraseña;
+    
+    
     
     
     public crear_usuario(Conexion conec) {
@@ -36,7 +40,9 @@ public class crear_usuario extends javax.swing.JFrame {
         
         this.txtcontraseña.setText("");
         this.txtConfContraseña.setText("");
+       
         
+              
     }
 
     /**
@@ -48,6 +54,8 @@ public class crear_usuario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTextField1 = new javax.swing.JTextField();
+        jSlider1 = new javax.swing.JSlider();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -59,6 +67,11 @@ public class crear_usuario extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         txtcontraseña = new javax.swing.JPasswordField();
         txtConfContraseña = new javax.swing.JPasswordField();
+        btn_verContraseña = new javax.swing.JButton();
+        txtVerContraseña = new javax.swing.JTextField();
+        txtVerConfContraseña = new javax.swing.JTextField();
+
+        jTextField1.setText("jTextField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -95,6 +108,36 @@ public class crear_usuario extends javax.swing.JFrame {
         });
 
         txtConfContraseña.setText("jPasswordField2");
+        txtConfContraseña.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtConfContraseñaActionPerformed(evt);
+            }
+        });
+
+        btn_verContraseña.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icono-del-ojo-azul-49228185.png"))); // NOI18N
+        btn_verContraseña.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_verContraseñaActionPerformed(evt);
+            }
+        });
+
+        txtVerContraseña.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtVerContraseña.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                txtVerContraseñaPropertyChange(evt);
+            }
+        });
+
+        txtVerConfContraseña.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtVerConfContraseñaActionPerformed(evt);
+            }
+        });
+        txtVerConfContraseña.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                txtVerConfContraseñaPropertyChange(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -103,9 +146,9 @@ public class crear_usuario extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(38, 38, 38)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(btnCrear, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
                         .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -113,40 +156,59 @@ public class crear_usuario extends javax.swing.JFrame {
                             .addComponent(jLabel2)
                             .addComponent(jLabel3)
                             .addComponent(jLabel4))
-                        .addGap(21, 21, 21)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE)
-                            .addComponent(txtCorreo)
-                            .addComponent(txtcontraseña)
-                            .addComponent(txtConfContraseña))))
-                .addContainerGap(25, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(109, 109, 109))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(21, 21, 21)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
+                                    .addComponent(txtNombre)
+                                    .addComponent(txtCorreo)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(txtcontraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGap(32, 32, 32)
+                                            .addComponent(txtVerContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(32, 32, 32)
+                                            .addComponent(txtVerConfContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(txtConfContraseña, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addGap(18, 18, 18)
+                .addComponent(btn_verContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(128, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(16, 16, 16)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
+                .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
+                .addGap(19, 19, 19)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_verContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel3)
+                        .addComponent(txtcontraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(jLabel4))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtConfContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(txtcontraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(txtConfContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
+                    .addComponent(txtVerContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtVerConfContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(11, 11, 11)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCrear, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -170,11 +232,10 @@ public class crear_usuario extends javax.swing.JFrame {
 //        ventanaLogin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 //        this.setVisible(false);
 //        ventanaLogin.setVisible(true);
-  String nombre,correo,contraseña,confcontraseña;
-  nombre=txtNombre.getText();
-  correo=txtCorreo.getText();
+  
   contraseña= new String(txtcontraseña.getPassword());
   confcontraseña= new String(txtConfContraseña.getPassword());
+  
   
   
    
@@ -184,20 +245,38 @@ public class crear_usuario extends javax.swing.JFrame {
             javax.swing.JOptionPane.showMessageDialog(this,"Debe llenar todos los campos \n","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
             txtNombre.requestFocus();
         }
+    
     else
         {
-            if(Arrays.equals(txtcontraseña.getPassword(), txtConfContraseña.getPassword()))
+  
+            if(Arrays.equals(txtcontraseña.getPassword(), txtConfContraseña.getPassword())  )
             {
                     try {
                         conec.ejecutarProcediminetoTabla("{CALL nuevo_usuario('"+txtNombre.getText()+"','"+txtCorreo.getText()+"','"+new String(txtcontraseña.getPassword())+"')}");
+                           javax.swing.JOptionPane.showMessageDialog(this,"REGISTRO EXITOSO \n","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
+                           this.txtNombre.setText("");
+                           this.txtCorreo.setText("");
+                           this.txtcontraseña.setText("");
+                           this.txtConfContraseña.setText("");
+                           txtNombre.requestFocus();
                     } catch (Exception e) {
                         JOptionPane.showMessageDialog(this, "Error al crear nuevo usuario: "+e.getMessage());
                     }
             }
             else{
                 javax.swing.JOptionPane.showMessageDialog(this,"Las contraseñas no coinciden \n","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
-                this.txtcontraseña.setText("");
-                this.txtConfContraseña.setText("");
+//                this.txtcontraseña.setText("");
+//                this.txtConfContraseña.setText("");
+////                contraseña="";
+////                confcontraseña="";
+//                  contraseña= txtVerContraseña.getText();
+//                  confcontraseña= txtVerConfContraseña.getText();
+                this.txtVerContraseña.setVisible(false);
+                this.txtVerConfContraseña.setVisible(false);
+                  this.txtcontraseña.setText(contraseña);
+                  this.txtConfContraseña.setText(confcontraseña);
+                this.txtcontraseña.setVisible(true);
+                this.txtConfContraseña.setVisible(true);
                 txtcontraseña.requestFocus();
             }
                 
@@ -217,6 +296,47 @@ public class crear_usuario extends javax.swing.JFrame {
     private void txtcontraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcontraseñaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtcontraseñaActionPerformed
+
+    private void btn_verContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_verContraseñaActionPerformed
+     this.txtcontraseña.setVisible(false);
+     this.txtConfContraseña.setVisible(false);
+     this.txtVerContraseña.setBounds(187, 135, 154, 21);
+     this.txtVerConfContraseña.setBounds(187, 175, 154, 21);
+     this.txtVerContraseña.setVisible(true);
+     this.txtVerConfContraseña.setVisible(true);
+      
+        
+        this.txtVerContraseña.setText(contraseña);
+        this.txtVerConfContraseña.setText(confcontraseña);
+        this.txtVerContraseña.setEditable(true);
+        this.txtVerConfContraseña.setEditable(true);
+        
+      
+        
+     
+    }//GEN-LAST:event_btn_verContraseñaActionPerformed
+
+    private void txtConfContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtConfContraseñaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtConfContraseñaActionPerformed
+
+    private void txtVerConfContraseñaPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_txtVerConfContraseñaPropertyChange
+this.txtVerConfContraseña.setVisible(false);
+
+
+             // TODO add your handling code here:
+    }//GEN-LAST:event_txtVerConfContraseñaPropertyChange
+
+    private void txtVerConfContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtVerConfContraseñaActionPerformed
+
+                // TODO add your handling code here:
+    }//GEN-LAST:event_txtVerConfContraseñaActionPerformed
+
+    private void txtVerContraseñaPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_txtVerContraseñaPropertyChange
+        // TODO add your handling code here:
+        this.txtVerContraseña.setVisible(false);
+        
+    }//GEN-LAST:event_txtVerContraseñaPropertyChange
 
     /**
      * @param args the command line arguments
@@ -256,14 +376,19 @@ public class crear_usuario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnCrear;
+    private javax.swing.JButton btn_verContraseña;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JSlider jSlider1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JPasswordField txtConfContraseña;
     private javax.swing.JTextField txtCorreo;
     private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtVerConfContraseña;
+    private javax.swing.JTextField txtVerContraseña;
     private javax.swing.JPasswordField txtcontraseña;
     // End of variables declaration//GEN-END:variables
 }
