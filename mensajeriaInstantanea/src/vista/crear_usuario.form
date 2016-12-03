@@ -178,17 +178,11 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JPasswordField" name="txtcontrase&#xf1;a">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jPasswordField1"/>
-      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtcontrase&#xf1;aActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JPasswordField" name="txtConfContrase&#xf1;a">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jPasswordField2"/>
-      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtConfContrase&#xf1;aActionPerformed"/>
       </Events>

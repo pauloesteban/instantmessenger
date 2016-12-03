@@ -13,6 +13,8 @@ import java.sql.Statement;
 import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -100,14 +102,12 @@ public class crear_usuario extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel5.setText("CREAR USUARIO");
 
-        txtcontraseña.setText("jPasswordField1");
         txtcontraseña.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtcontraseñaActionPerformed(evt);
             }
         });
 
-        txtConfContraseña.setText("jPasswordField2");
         txtConfContraseña.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtConfContraseñaActionPerformed(evt);
@@ -248,8 +248,9 @@ public class crear_usuario extends javax.swing.JFrame {
     
     else
         {
-  
-            if(Arrays.equals(txtcontraseña.getPassword(), txtConfContraseña.getPassword())  )
+            boolean status=email(txtCorreo.getText());
+            if (status) {
+                if(Arrays.equals(txtcontraseña.getPassword(), txtConfContraseña.getPassword())  )
             {
                     try {
                         conec.ejecutarProcediminetoTabla("{CALL nuevo_usuario('"+txtNombre.getText()+"','"+txtCorreo.getText()+"','"+new String(txtcontraseña.getPassword())+"')}");
@@ -278,7 +279,12 @@ public class crear_usuario extends javax.swing.JFrame {
                 this.txtcontraseña.setVisible(true);
                 this.txtConfContraseña.setVisible(true);
                 txtcontraseña.requestFocus();
+              }
             }
+            else{
+                javax.swing.JOptionPane.showMessageDialog(this,"Correo invalido \n","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
+            }
+            
                 
         }
             
@@ -296,26 +302,61 @@ public class crear_usuario extends javax.swing.JFrame {
     private void txtcontraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcontraseñaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtcontraseñaActionPerformed
-
+    boolean visto=true;
     private void btn_verContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_verContraseñaActionPerformed
-     this.txtcontraseña.setVisible(false);
-     this.txtConfContraseña.setVisible(false);
-     this.txtVerContraseña.setBounds(187, 135, 154, 21);
-     this.txtVerConfContraseña.setBounds(187, 175, 154, 21);
-     this.txtVerContraseña.setVisible(true);
-     this.txtVerConfContraseña.setVisible(true);
+     
       
-        
-        this.txtVerContraseña.setText(contraseña);
-        this.txtVerConfContraseña.setText(confcontraseña);
-        this.txtVerContraseña.setEditable(true);
-        this.txtVerConfContraseña.setEditable(true);
+        if (visto) {
+            this.txtcontraseña.setVisible(false);
+            this.txtVerConfContraseña.setBounds(187, 175, 154, 21);
+            this.txtVerConfContraseña.setVisible(true);
+            this.txtConfContraseña.setVisible(false);
+            this.txtVerContraseña.setVisible(true);
+            this.txtVerContraseña.setBounds(187, 135, 154, 21);
+            this.txtVerContraseña.setText(txtcontraseña.getText());
+            
+             txtVerConfContraseña.setText(txtConfContraseña.getText());  
+            
+            
+            
+            visto=false;
+        }
+        else{
+            this.txtcontraseña.setVisible(true);
+            this.txtVerConfContraseña.setBounds(187, 175, 154, 21);
+            this.txtVerConfContraseña.setVisible(false);
+            this.txtConfContraseña.setVisible(true);
+            this.txtVerContraseña.setVisible(false);
+            this.txtVerContraseña.setBounds(187, 135, 154, 21);
+            txtcontraseña.setText(txtVerContraseña.getText());
+            txtConfContraseña.setText(txtVerConfContraseña.getText());
+//            this.txtVerContraseña.setText(txtcontraseña.getText());
+            visto=true;
+        }
+//        this.txtVerConfContraseña.setText(confcontraseña);
+//        this.txtVerContraseña.setEditable(true);
+//        this.txtVerConfContraseña.setEditable(true);
         
       
         
      
     }//GEN-LAST:event_btn_verContraseñaActionPerformed
-
+    
+    
+    public boolean email(String email){
+      boolean status=false;
+      String emailp="[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[_A-Za-z0-9]+(\\.[_A-Za-z0-9-]+)*(\\.[_A-Za-z]{2,})$";
+      Pattern pattern= Pattern.compile(emailp);
+      Matcher matcher=pattern.matcher(email);
+        if (matcher.matches()) {
+            status=true;
+        }else{
+            status=false;
+        }
+      return status;
+    }
+    
+    
     private void txtConfContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtConfContraseñaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtConfContraseñaActionPerformed
@@ -324,7 +365,7 @@ public class crear_usuario extends javax.swing.JFrame {
 this.txtVerConfContraseña.setVisible(false);
 
 
-             // TODO add your handling code here:
+             // TODO ad@d your handling code here:
     }//GEN-LAST:event_txtVerConfContraseñaPropertyChange
 
     private void txtVerConfContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtVerConfContraseñaActionPerformed
