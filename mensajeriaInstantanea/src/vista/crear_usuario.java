@@ -259,6 +259,8 @@ public class crear_usuario extends javax.swing.JFrame {
                            this.txtCorreo.setText("");
                            this.txtcontraseña.setText("");
                            this.txtConfContraseña.setText("");
+                           this.txtVerContraseña.setText("");
+                           this.txtVerConfContraseña.setText("");
                            txtNombre.requestFocus();
                     } catch (Exception e) {
                         JOptionPane.showMessageDialog(this, "Error al crear nuevo usuario: "+e.getMessage());
